@@ -24,22 +24,54 @@
   "bugs": {
     "url": "https://github.com/matheusdavidson/angular-cropperjs/issues"
   },
-  "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
-    "cropperjs": "^1.4.1"
-  },
-  "main": "bundles/angular-cropperjs.umd.js",
-  "module": "fesm2015/angular-cropperjs.js",
-  "es2015": "fesm2015/angular-cropperjs.js",
-  "esm2015": "esm2015/angular-cropperjs.js",
-  "fesm2015": "fesm2015/angular-cropperjs.js",
-  "typings": "angular-cropperjs.d.ts",
-  "sideEffects": false,
-  "dependencies": {
-    "tslib": "^2.2.0"
-  },
   "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "build_lib": "ng build --prod angular-cropperjs",
+    "npm_pack": "cd dist/angular-cropperjs && npm pack",
+    "package": "npm run build_lib && npm run npm_pack"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^12.2.13",
+    "@angular/common": "^12.2.13",
+    "@angular/compiler": "^12.2.13",
+    "@angular/core": "^12.2.13",
+    "@angular/forms": "^12.2.13",
+    "@angular/platform-browser": "^12.2.13",
+    "@angular/platform-browser-dynamic": "^12.2.13",
+    "@angular/router": "^12.2.13",
+    "core-js": "^2.5.4",
+    "cropperjs": "^1.5.6",
+    "rxjs": "^7.4.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^12.2.13",
+    "@angular-devkit/build-angular": "~12.2.13",
+    "ng-packagr": "^12.2.1",
+    "tsickle": ">=0.25.5",
+    "tslib": "^2.3.1",
+    "typescript": "~4.3.5",
+    "@angular/cli": "~12.2.13",
+    "@angular/language-service": "^12.2.13",
+    "@types/jasmine": "~2.8.6",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "14.14.10",
+    "codelyzer": "~6.0.2",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~6.3.7",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.0",
+    "karma-jasmine": "~1.1.1",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~7.0.0",
+    "ts-node": "9.0.0",
+    "tslint": "6.1.3"
   }
 }
